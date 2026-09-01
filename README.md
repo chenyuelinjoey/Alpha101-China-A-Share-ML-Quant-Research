@@ -8,11 +8,7 @@
 
 ---
 
-## 📊 Project Overview
-
-This project systematically evaluates the predictive power of **WorldQuant Alpha101 factors** on the **China A-share market (CSI 300 constituents)** using 19 machine learning models.
-
-### Key Results
+## 📊 Key Results
 
 | Metric | Result |
 |--------|--------|
@@ -21,6 +17,8 @@ This project systematically evaluates the predictive power of **WorldQuant Alpha
 | 📉 **Best MSE** | 0.000547 |
 | 📊 **Best MAE** | 0.016060 |
 | 🔍 **Most Important Factor** | **alpha012** (Price-Volume Divergence) |
+| 💰 **Best Strategy (Long-Short)** | **+14.09%** total return (2021-2025) |
+| 📊 **Sharpe Ratio (Long-Short)** | **0.3903** |
 
 ---
 
@@ -37,21 +35,22 @@ This project systematically evaluates the predictive power of **WorldQuant Alpha
 ┌─────────────────────────────────────────────────────────────────┐
 │                        Model Layer                              │
 ├─────────────────────────────────────────────────────────────────┤
-│  Linear: Ridge, Lasso, ElasticNet                               │
-│  Tree: LightGBM, XGBoost, CatBoost, RandomForest                │
-│  Ensemble: Ensemble_All_Tree (LGB+XGB+Cat+RF) 🏆                │
-│  Deep: LSTM, Transformer                                        │
-│  Feature Extraction: Autoencoder                                │
+│    Linear: Ridge, Lasso, ElasticNet                             │
+│    Tree: LightGBM, XGBoost, CatBoost, RandomForest              │
+│    Ensemble: Ensemble_All_Tree (LGB+XGB+Cat+RF)                 │
+│    Deep: LSTM, Transformer                                      │
+│    Feature Extraction: Autoencoder                              │
 └─────────────────────────────────────────────────────────────────┘
                               ↓
 ┌─────────────────────────────────────────────────────────────────┐
-│                    Interpretation Layer                         │
+│                     Interpretation Layer                        │
 ├─────────────────────────────────────────────────────────────────┤
-│  SHAP global feature importance analysis                        │
+│   SHAP global feature importance analysis                       │
 └─────────────────────────────────────────────────────────────────┘
                               ↓
 ┌─────────────────────────────────────────────────────────────────┐
 │                       Backtest Layer                            │
 ├─────────────────────────────────────────────────────────────────┤
-│   Daily/Monthly rebalancing → Transaction costs → Performance   │
+│   Long-Only / Long-Short / Beta Neutral / Stop-loss             │
+│   Performance metrics: Sharpe, Max DD, Win rate                 │
 └─────────────────────────────────────────────────────────────────┘
