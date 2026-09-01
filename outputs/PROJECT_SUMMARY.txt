@@ -2,8 +2,8 @@
 ║                                                                               ║
 ║              Alpha101-China-A-Share-ML-Quant-Research                         ║
 ║                                                                               ║
-║   A complete quantitative research framework for China A-share market        ║
-║   using Alpha101 factors and machine learning ensemble models                ║
+║   Quantitative research framework for China A-share market using              ║
+║   Alpha101 factors and machine learning ensemble models                       ║
 ║                                                                               ║
 ╚═══════════════════════════════════════════════════════════════════════════════╝
 
@@ -24,29 +24,29 @@ KEY RESULTS
 ================================================================================
 
 ┌───────────────────────────────────────────────────────────────────────────────┐
-│ Metric                          │ Result                                     │
-├─────────────────────────────────┼────────────────────────────────────────────┤
-│ Best Model                      │ Ensemble_All_Tree                          │
-│                                   │ (LightGBM + XGBoost + CatBoost + RF)    │
-│ Best IC                         │ 0.0552                                     │
-│ Best MSE                        │ 0.000547                                   │
-│ Best MAE                        │ 0.016060                                   │
-│ Most Important Factor           │ alpha012 (Price-Volume Divergence)        │
-│ Best Strategy                   │ Long-Short                                 │
-│ Total Return (2021-2025)        │ +14.09%                                    │
-│ Sharpe Ratio                    │ 0.3903                                     │
-│ Max Drawdown                    │ -12.67%                                    │
-│ Alpha vs CSI 300                │ +26.2%                                     │
-└─────────────────────────────────┴────────────────────────────────────────────┘
+│ Metric                          │ Result                                      │
+├─────────────────────────────────┼─────────────────────────────────────────────┤
+│ Best Model                      │ Ensemble_All_Tree                           │
+│                                 │ (LightGBM + XGBoost + CatBoost + RF)        │
+│ Best IC                         │ 0.0552                                      │
+│ Best MSE                        │ 0.000547                                    │
+│ Best MAE                        │ 0.016060                                    │
+│ Most Important Factor           │ alpha012 (Price-Volume Divergence)          │
+│ Best Strategy                   │ Long-Short                                  │
+│ Total Return (2021-2025)        │ +14.09%                                     │
+│ Sharpe Ratio                    │ 0.3903                                      │
+│ Max Drawdown                    │ -12.67%                                     │
+│ Alpha vs CSI 300                │ +26.2%                                      │
+└─────────────────────────────────┴─────────────────────────────────────────────┘
 
 ================================================================================
 MODEL PERFORMANCE RANKING (Top 10)
 ================================================================================
 
 ┌───────────────────────────────────────────────────────────────────────────────┐
-│ Rank │ Model                 │ IC     │ MSE     │ MAE     │                  │
-├──────┼───────────────────────┼────────┼─────────┼─────────┼──────────────────┤
-│ 1    │ Ensemble_All_Tree     │ 0.0552 │ 0.000547│ 0.016060│ 🏆 Best Overall  │
+│ Rank │ Model                 │ IC     │ MSE     │ MAE     │                   │
+├──────┼───────────────────────┼────────┼─────────┼─────────┼───────────────────┤
+│ 1    │ Ensemble_All_Tree     │ 0.0552 │ 0.000547│ 0.016060│ 🏆 Best Overall   │
 │ 2    │ Stacking              │ 0.0540 │ 0.000547│ 0.016050│                   │
 │ 3    │ Ensemble_LGB_XGB      │ 0.0539 │ 0.000548│ 0.016070│                   │
 │ 4    │ LightGBM              │ 0.0539 │ 0.000548│ 0.016071│                   │
@@ -67,14 +67,14 @@ STRATEGY PERFORMANCE (2021-2025)
 Market Context - CSI 300 Index:
 
 ┌───────────────────────────────────────────────────────────────────────────────┐
-│ Year │ CSI 300 Return │                                                     │
-├──────┼────────────────┼─────────────────────────────────────────────────────┤
-│ 2021 │ -5.20%         │                                                     │
-│ 2022 │ -21.63%        │  ← Bear market                                     │
-│ 2023 │ -11.38%        │                                                     │
-│ 2024 │ +14.68%        │                                                     │
-│ 2025 │ +17.66%        │                                                     │
-└──────┴────────────────┴─────────────────────────────────────────────────────┘
+│ Year │ CSI 300 Return │                                                       │
+├──────┼────────────────┼───────────────────────────────────────────────────────┤
+│ 2021 │ -5.20%         │                                                       │
+│ 2022 │ -21.63%        │  ← Bear market                                        │
+│ 2023 │ -11.38%        │                                                       │
+│ 2024 │ +14.68%        │                                                       │
+│ 2025 │ +17.66%        │                                                       │
+└──────┴────────────────┴───────────────────────────────────────────────────────┘
 
 Total Return (2021-2025): -12.1%
 Annualized Return: -2.5%
@@ -82,13 +82,13 @@ Annualized Return: -2.5%
 Strategy Comparison:
 
 ┌───────────────────────────────────────────────────────────────────────────────┐
-│ Strategy     │ Total Return │ Sharpe  │ Max DD  │ vs CSI 300 │              │
-├──────────────┼──────────────┼─────────┼─────────┼────────────┼──────────────┤
-│ CSI 300      │ -12.10%      │ -0.20   │ -45.60% │ --         │ Benchmark    │
-│ Long-Only    │ -3.51%       │ -0.0395 │ -39.30% │ +8.6%      │              │
-│ Long-Short   │ +14.09% 🏆   │ 0.3903  │ -12.67% │ +26.2%     │ Best Strategy│
-│ Beta Neutral │ -15.39%      │ -0.3840 │ -29.92% │ -3.3%      │              │
-└──────────────┴──────────────┴─────────┴─────────┴────────────┴──────────────┘
+│ Strategy     │ Total Return │ Sharpe  │ Max DD  │ vs CSI 300 │                │
+├──────────────┼──────────────┼─────────┼─────────┼────────────┼────────────────┤
+│ CSI 300      │ -12.10%      │ -0.20   │ -45.60% │ --         │ Benchmark  ──  │
+│ Long-Only    │ -3.51%       │ -0.0395 │ -39.30% │ +8.6%      │                │
+│ Long-Short   │ +14.09% 🏆   │ 0.3903  │ -12.67% │ +26.2%     │ Best Strategy  │
+│ Beta Neutral │ -15.39%      │ -0.3840 │ -29.92% │ -3.3%      │                │
+└──────────────┴──────────────┴─────────┴─────────┴────────────┴────────────────┘
 
 📊 Visual Comparison:
 
@@ -138,32 +138,32 @@ SHAP TOP 10 FACTORS
 ================================================================================
 
 ┌───────────────────────────────────────────────────────────────────────────────┐
-│ Rank │ Factor   │ Mean SHAP │ Direction │ Description                     │
-├──────┼──────────┼───────────┼───────────┼─────────────────────────────────┤
-│ 1    │ alpha012 │ 0.0008    │ Negative  │ Volume × Price divergence       │
-│ 2    │ alpha009 │ 0.0006    │ Negative  │ Short-term price reversal       │
-│ 3    │ alpha013 │ 0.0005    │ Negative  │ Price-volume covariance         │
-│ 4    │ alpha004 │ 0.0004    │ Negative  │ Price extreme regression        │
-│ 5    │ alpha014 │ 0.0003    │ Negative  │ VWAP deviation                  │
-│ 6    │ alpha008 │ 0.0003    │ Negative  │ Momentum reversal               │
-│ 7    │ alpha028 │ 0.0002    │ Negative  │ Low-VWAP relationship           │
-│ 8    │ alpha026 │ 0.0002    │ Negative  │ Close/High × Volume             │
-│ 9    │ alpha030 │ 0.0002    │ Negative  │ Volume relative strength        │
-│ 10   │ alpha018 │ 0.0002    │ Negative  │ Close/VWAP spread               │
-└──────┴──────────┴───────────┴───────────┴─────────────────────────────────┘
+│ Rank │ Factor   │ Mean SHAP │ Direction │ Description                         │
+├──────┼──────────┼───────────┼───────────┼─────────────────────────────────────┤
+│ 1    │ alpha012 │ 0.0008    │ Negative  │ Volume × Price divergence           │
+│ 2    │ alpha009 │ 0.0006    │ Negative  │ Short-term price reversal           │
+│ 3    │ alpha013 │ 0.0005    │ Negative  │ Price-volume covariance             │
+│ 4    │ alpha004 │ 0.0004    │ Negative  │ Price extreme regression            │
+│ 5    │ alpha014 │ 0.0003    │ Negative  │ VWAP deviation                      │
+│ 6    │ alpha008 │ 0.0003    │ Negative  │ Momentum reversal                   │
+│ 7    │ alpha028 │ 0.0002    │ Negative  │ Low-VWAP relationship               │
+│ 8    │ alpha026 │ 0.0002    │ Negative  │ Close/High × Volume                 │
+│ 9    │ alpha030 │ 0.0002    │ Negative  │ Volume relative strength            │
+│ 10   │ alpha018 │ 0.0002    │ Negative  │ Close/VWAP spread                   │
+└──────┴──────────┴───────────┴───────────┴─────────────────────────────────────┘
 
 ================================================================================
 TECHNICAL ARCHITECTURE
 ================================================================================
 
 ┌───────────────────────────────────────────────────────────────────────────────┐
-│ Layer          │ Components                                                 │
-├────────────────┼────────────────────────────────────────────────────────────┤
-│ Data Layer     │ CSMAR A-share → CSI 300 → Lag → VWAP → 101 Alpha Factors  │
-│ Model Layer    │ Linear / Tree / Ensemble / Deep / Feature Extraction       │
-│ Interpretation │ SHAP Global Feature Importance Analysis                    │
-│ Backtest Layer │ Long-Only / Long-Short / Beta Neutral / Stop-loss         │
-└────────────────┴────────────────────────────────────────────────────────────┘
+│ Layer          │ Components                                                   │
+├────────────────┼──────────────────────────────────────────────────────────────┤
+│ Data Layer     │ CSMAR A-share → CSI 300 → Lag → VWAP → 101 Alpha Factors     │
+│ Model Layer    │ Linear / Tree / Ensemble / Deep / Feature Extraction         │
+│ Interpretation │ SHAP Global Feature Importance Analysis                      │
+│ Backtest Layer │ Long-Only / Long-Short / Beta Neutral / Stop-loss            │
+└────────────────┴──────────────────────────────────────────────────────────────┘
 
 Models Evaluated: 19 total
 
