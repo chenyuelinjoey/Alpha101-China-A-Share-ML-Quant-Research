@@ -283,12 +283,6 @@ REFERENCES
 4. CatBoost — https://github.com/catboost/catboost
 5. SHAP — https://github.com/slundberg/shap
 
-================================================================================
-CONTACT
-================================================================================
-
-- GitHub: your-username
-- Email: your-email@example.com
 
 ⭐ If you find this project useful, please give it a star!
 
