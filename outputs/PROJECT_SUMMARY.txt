@@ -2,8 +2,8 @@
 ║                                                                               ║
 ║              Alpha101-China-A-Share-ML-Quant-Research                         ║
 ║                                                                               ║
-║   Quantitative research framework for China A-share market using              ║
-║   Alpha101 factors and machine learning ensemble models                       ║
+║   A complete quantitative research framework for China A-share market         ║
+║   using Alpha101 factors and machine learning ensemble models                 ║
 ║                                                                               ║
 ╚═══════════════════════════════════════════════════════════════════════════════╝
 
@@ -27,7 +27,7 @@ KEY RESULTS
 │ Metric                          │ Result                                      │
 ├─────────────────────────────────┼─────────────────────────────────────────────┤
 │ Best Model                      │ Ensemble_All_Tree                           │
-│                                 │ (LightGBM + XGBoost + CatBoost + RF)        │
+│                                   │ (LightGBM + XGBoost + CatBoost + RF)      │
 │ Best IC                         │ 0.0552                                      │
 │ Best MSE                        │ 0.000547                                    │
 │ Best MAE                        │ 0.016060                                    │
@@ -84,7 +84,7 @@ Strategy Comparison:
 ┌───────────────────────────────────────────────────────────────────────────────┐
 │ Strategy     │ Total Return │ Sharpe  │ Max DD  │ vs CSI 300 │                │
 ├──────────────┼──────────────┼─────────┼─────────┼────────────┼────────────────┤
-│ CSI 300      │ -12.10%      │ -0.20   │ -45.60% │ --         │ Benchmark  ──  │
+│ CSI 300      │ -12.10%      │ -0.20   │ -45.60% │ --         │ Benchmark      │
 │ Long-Only    │ -3.51%       │ -0.0395 │ -39.30% │ +8.6%      │                │
 │ Long-Short   │ +14.09% 🏆   │ 0.3903  │ -12.67% │ +26.2%     │ Best Strategy  │
 │ Beta Neutral │ -15.39%      │ -0.3840 │ -29.92% │ -3.3%      │                │
@@ -126,12 +126,14 @@ KEY INSIGHTS
 4.  Long-Short Strategy Works:
     ───────────────────────────
     The Long-Short strategy successfully converted the model's IC (0.0552)
-    into positive absolute returns (+14.09%) during a challenging bear market.
+    into positive absolute returns (+14.09%) during a challenging bear market
+    where CSI 300 declined -12.1%.
 
 5.  Pure Alpha Capture:
     ────────────────────
     Hedging market beta (Long-Short) successfully isolated the model's
-    predictive power from market direction, achieving consistent alpha.
+    predictive power from market direction, achieving consistent alpha of
+    +26.2 percentage points over the benchmark.
 
 ================================================================================
 SHAP TOP 10 FACTORS
@@ -162,7 +164,7 @@ TECHNICAL ARCHITECTURE
 │ Data Layer     │ CSMAR A-share → CSI 300 → Lag → VWAP → 101 Alpha Factors     │
 │ Model Layer    │ Linear / Tree / Ensemble / Deep / Feature Extraction         │
 │ Interpretation │ SHAP Global Feature Importance Analysis                      │
-│ Backtest Layer │ Long-Only / Long-Short / Beta Neutral / Stop-loss            │
+│ Backtest Layer │ Long-Only / Long-Short / Beta Neutral / Stop-loss (-10%)     │
 └────────────────┴──────────────────────────────────────────────────────────────┘
 
 Models Evaluated: 19 total
@@ -225,6 +227,7 @@ Alpha101-China-A-Share-ML-Quant-Research/
 │   ├── strategy_comparison.png
 │   ├── backtest_Long-Only.csv
 │   ├── backtest_Long-Short.csv
+│   ├── backtest_Beta_Neutral.csv
 │   ├── submission_final.csv
 │   └── PROJECT_SUMMARY.txt            # This file
 │
@@ -282,7 +285,6 @@ REFERENCES
 3. XGBoost — https://github.com/dmlc/xgboost
 4. CatBoost — https://github.com/catboost/catboost
 5. SHAP — https://github.com/slundberg/shap
-
 
 ⭐ If you find this project useful, please give it a star!
 
