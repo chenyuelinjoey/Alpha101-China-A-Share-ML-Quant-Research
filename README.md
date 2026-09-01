@@ -18,9 +18,24 @@
 
 ## 📁 Repository Structure
 
-```text
-├── notebooks/          # All implementation code
-├── outputs/            # Results (CSV, PNG)
-├── models/             # Saved model bundle
+Alpha101-China-A-Share-ML-Quant-Research/
+│
 ├── README.md
-└── requirements.txt
+├── LICENSE
+├── requirements.txt
+├── .gitignore
+│
+├── notebooks/
+│   ├── 2.1_benchmark_models.py
+│   ├── 2.2_tree_models.py
+│   ├── 2.3_ensemble_models.py
+│   ├── 2.4_deep_learning.py
+│   ├── 2.5_summary_shap.py
+│   └── backtest_analysis.py
+│
+└── outputs/
+    ├── all_models_ranking.csv
+    ├── shap_bar.png
+    ├── shap_summary.png
+    ├── backtest_analysis.png
+    └── submission_final.csv
