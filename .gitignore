@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.dll
+*.pkl
+*.npy
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Data (版权保护)
+data/
+*.csv
+*.xlsx
+
+# Kaggle
+/kaggle/
+
+# Mac
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
