@@ -19,6 +19,7 @@
 | 🔍 **Most Important Factor** | **alpha012** (Price-Volume Divergence) |
 | 💰 **Best Strategy (Long-Short)** | **+14.09%** total return (2021-2025) |
 | 📊 **Sharpe Ratio (Long-Short)** | **0.3903** |
+| 🎯 **Alpha vs CSI 300** | **+26.2%** (outperformance) |
 
 ---
 
@@ -28,29 +29,29 @@
 ┌─────────────────────────────────────────────────────────────────┐
 │                         Data Layer                              │
 ├─────────────────────────────────────────────────────────────────┤
-│    CSMAR A-share data → CSI 300 constituents → Lag processing   │
-│    True VWAP = amount / volume → 101 Alpha factors              │
+│  CSMAR A-share data → CSI 300 constituents → Lag processing     │
+│  True VWAP = amount / volume → 101 Alpha factors                │
 └─────────────────────────────────────────────────────────────────┘
                               ↓
 ┌─────────────────────────────────────────────────────────────────┐
-│                        Model Layer                              │
+│                       Model Layer                               │
 ├─────────────────────────────────────────────────────────────────┤
-│    Linear: Ridge, Lasso, ElasticNet                             │
-│    Tree: LightGBM, XGBoost, CatBoost, RandomForest              │
-│    Ensemble: Ensemble_All_Tree (LGB+XGB+Cat+RF)                 │
-│    Deep: LSTM, Transformer                                      │
-│    Feature Extraction: Autoencoder                              │
+│  Linear: Ridge, Lasso, ElasticNet                               │
+│  Tree: LightGBM, XGBoost, CatBoost, RandomForest                │
+│  Ensemble: Ensemble_All_Tree (LGB+XGB+Cat+RF) 🏆                │
+│  Deep: LSTM, Transformer                                        │
+│  Feature Extraction: Autoencoder                                │
 └─────────────────────────────────────────────────────────────────┘
                               ↓
 ┌─────────────────────────────────────────────────────────────────┐
-│                     Interpretation Layer                        │
+│                    Interpretation Layer                         │
 ├─────────────────────────────────────────────────────────────────┤
-│   SHAP global feature importance analysis                       │
+│  SHAP global feature importance analysis                        │
 └─────────────────────────────────────────────────────────────────┘
                               ↓
 ┌─────────────────────────────────────────────────────────────────┐
-│                       Backtest Layer                            │
+│                      Backtest Layer                             │
 ├─────────────────────────────────────────────────────────────────┤
-│   Long-Only / Long-Short / Beta Neutral / Stop-loss             │
-│   Performance metrics: Sharpe, Max DD, Win rate                 │
+│  Long-Only / Long-Short / Beta Neutral / Stop-loss              │
+│  Performance metrics: Sharpe, Max DD, Win rate                  │
 └─────────────────────────────────────────────────────────────────┘
