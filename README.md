@@ -28,30 +28,30 @@ This project systematically evaluates the predictive power of **WorldQuant Alpha
 
 ```text
 ┌─────────────────────────────────────────────────────────────────┐
-│                         Data Layer                             │
+│                         Data Layer                              │
 ├─────────────────────────────────────────────────────────────────┤
-│  CSMAR A-share data → CSI 300 constituents → Lag processing   │
-│  True VWAP = amount / volume → 101 Alpha factors              │
+│    CSMAR A-share data → CSI 300 constituents → Lag processing   │
+│    True VWAP = amount / volume → 101 Alpha factors              │
 └─────────────────────────────────────────────────────────────────┘
                               ↓
 ┌─────────────────────────────────────────────────────────────────┐
-│                       Model Layer                              │
+│                        Model Layer                              │
 ├─────────────────────────────────────────────────────────────────┤
-│  Linear: Ridge, Lasso, ElasticNet                             │
-│  Tree: LightGBM, XGBoost, CatBoost, RandomForest              │
-│  Ensemble: Ensemble_All_Tree (LGB+XGB+Cat+RF) 🏆             │
-│  Deep: LSTM, Transformer                                      │
-│  Feature Extraction: Autoencoder                              │
+│  Linear: Ridge, Lasso, ElasticNet                               │
+│  Tree: LightGBM, XGBoost, CatBoost, RandomForest                │
+│  Ensemble: Ensemble_All_Tree (LGB+XGB+Cat+RF) 🏆                │
+│  Deep: LSTM, Transformer                                        │
+│  Feature Extraction: Autoencoder                                │
 └─────────────────────────────────────────────────────────────────┘
                               ↓
 ┌─────────────────────────────────────────────────────────────────┐
-│                    Interpretation Layer                        │
+│                    Interpretation Layer                         │
 ├─────────────────────────────────────────────────────────────────┤
-│  SHAP global feature importance analysis                       │
+│  SHAP global feature importance analysis                        │
 └─────────────────────────────────────────────────────────────────┘
                               ↓
 ┌─────────────────────────────────────────────────────────────────┐
-│                      Backtest Layer                            │
+│                       Backtest Layer                            │
 ├─────────────────────────────────────────────────────────────────┤
-│  Daily/Monthly rebalancing → Transaction costs → Performance   │
+│   Daily/Monthly rebalancing → Transaction costs → Performance   │
 └─────────────────────────────────────────────────────────────────┘
